@@ -129,3 +129,7 @@ export function getCookie(name) {
 export function removeCookie(name) {
   return setCookie(name, 1, -1);
 }
+//通用打印
+export function print() {
+  return window.print();
+}
