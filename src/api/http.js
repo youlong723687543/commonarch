@@ -1,6 +1,5 @@
 import axios from "axios";
 import store from "./store";
-//import { Promise } from "core-js";
 //axios的访问配置
 if (process.env.NODE_ENV == "development") {
   axios.defaults.baseURL = "/api";
