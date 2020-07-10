@@ -133,3 +133,47 @@ export function removeCookie(name) {
 export function print() {
   return window.print();
 }
+//二分法查找算法
+export function getIndex(arr, key) {
+  var len = arr.length,
+    start = 0,
+    end = len - 1,
+    middle,
+    middle_val;
+  while (start <= end) {
+    middle = parseInt((start + end) / 2);
+
+    middle_val = arr[middle];
+
+    if (middle_val == key) {
+      return middle;
+    } else if (middle_val > key) {
+      end = middle - 1;
+    } else {
+      start = middle + 1;
+    }
+  }
+
+  return -1;
+}
+//二分法排序算法
+export function quick_sort(source_arr, left, right) {
+  if (left < right) {
+    var key = source_arr[left],
+      start = left,
+      end = right;
+    while (start < end) {
+      while (start < end && source_arr[end] > key) {
+        end--;
+      }
+      source_arr[start] = source_arr[end];
+      while (start < end && source_arr[start] < key) {
+        start++;
+      }
+      source_arr[end] = source_arr[start];
+    }
+    source_arr[start] = key;
+    quick_sort(source_arr, left, start - 1);
+    quick_sort(source_arr, start + 1, right);
+  }
+}
