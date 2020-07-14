@@ -1,3 +1,5 @@
-export default {
-  ashop: (state) => state.vshop + "哈哈",
-};
+const getters = {
+  visitedViews: state => state.visitedViews,
+  //.....获取更多数据
+}
+export default getters

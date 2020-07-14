@@ -1,3 +1,4 @@
-export default {
-  vshop: "123",
-};
+const state = {
+  visitedViews: []
+}
+export default state

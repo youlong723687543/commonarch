@@ -10,7 +10,7 @@ export function formatDate(source, format) {
     "m+": source.getMinutes(), // 分
     "s+": source.getSeconds(), // 秒
     "q+": Math.floor((source.getMonth() + 3) / 3), // 季度
-    "f+": source.getMilliseconds(), // 毫秒
+    "f+": source.getMilliseconds() // 毫秒
   };
   if (/(y+)/.test(format)) {
     format = format.replace(

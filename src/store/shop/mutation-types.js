@@ -1,0 +1,1 @@
+export const ADD_VISITED_VIEWS = 'ADD_VISITED_VIEWS'
