@@ -177,3 +177,12 @@ export function quick_sort(source_arr, left, right) {
     quick_sort(source_arr, start + 1, right);
   }
 }
+// 过滤非法字符串
+export function filterchart(parmas) {
+  let reg = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+  if (reg.test(parmas)) {
+    this.$message.error("非法字符串");
+  } else {
+    return;
+  }
+}
