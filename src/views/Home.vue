@@ -1,75 +1,215 @@
 <template>
-    <div class="tagcontainer">
-      <div class="tag-top">
-          <span class="selecttag">已选择:</span><span class="cleartag"><a @click="clearall()">清除所有</a></span>
-      </div>
-      <div class="tag-content">
-          <el-tag v-for="item in tagitems" :key="item.label" effect="plain" :closable="true">{{item.label}}</el-tag>
-      </div>
-    </div>
+  <div class="timecontainer">
+ <div class="block">
+    <el-date-picker
+      v-model="value2"
+      type="datetime"
+      placeholder="选择日期时间"
+      align="right"
+      :picker-options="pickerOptions">
+    </el-date-picker>
+  </div>
+  </div>
 </template>
-
 <script>
 export default {
-  name: "Home",
-  props:{
-    tagitems:{
-      type:Array,
-      default(){
-         return []
-      }
-    }
-  },
-  data() {
-    return {
-      
-    };
-  },
-  created() {},
-
-  methods: {
-    clearall(){
-      this.tagitems=[];
+  data(){
+    return{
+      pickerOptions: {
+        shortcuts: [{
+            text: '00:00',
+            onClick(picker) {
+              picker.$emit('pick', new Date());
+            }
+          },
+          {
+            text: '01:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '02:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '03:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '04:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '05:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '06:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '07:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '08:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '09:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '10:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '11:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '12:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '13:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '14:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '15:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '16:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '17:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '18:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '19:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '20:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '21:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '22:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: '23:00',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          },
+        ]
+      },
+      value2:'',
     }
   }
 };
 </script>
-<style scoped>
-  .tagcontainer{
-    width:260px;
-    height:100%;
-    position: relative;
-  }
-  .tagcontainer>>>.el-tag--plain{
-    margin-right:5px;
-    margin-bottom:5px;
-  }
-  .tag-top{
-    width:100%;
-    height:42px;
-  }
-  .tag-top:after{
-    clear: both;
-  }
-  .selecttag{
-    float: left;
-    font-size: 14px;
-    line-height: 42px;
-    font-family: "微软雅黑","苹方",sans-serif;
-    color: #333;
-  }
-  .cleartag{
-    float:right;
-    font-size:14px;
-    color:#3070b8;
-    cursor: pointer;
-    line-height: 42px;
-  }
-  .tag-content{
-    border: solid 1px #e4e4e4;
-    min-height: 535px;
-    overflow: auto;
-    padding:5px;
-  }
-
-</style>
